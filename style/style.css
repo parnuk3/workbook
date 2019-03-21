@@ -1,58 +1,99 @@
-.wrapper {
+/*Общие стили*/
+.clearfix::after { /*отмета обтекания*/
+    clear: both;
+}
+
+.wrapper { /*центровщик контента*/
     max-width: 1200px;
-    border: 1px solid #000;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
 }
+
+body {
+    font-family: sans-serif;
+}
+
+/*стили шапки*/
+
+.page-header {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
 .header-top {
-    display: block;
+    display: flex;
+    justify-content: space-around
     padding-bottom: 5px;
-    margin: 0 auto;
-    border: 1px solid #000;
-    text-align: center;
 }
 
-.header-column {
-    display: inline-block;
+.header-top p {
+    display: block;
+    margin: 0;
+    padding: 0;
     width: 300px;
-    margin-right: 20px;
 }
-
-.header-column:last-child {
-    margin-right: 0;
-}
-
 
 .header-description {
-    display: inline-block;
-    vertical-align: top;
     text-align: left;
 }
 
 .header-logo {
-
     display: inline-block;
     margin: 0 auto;
-    border: 1px solid #000;
-    background-color: red;
-    vertical-align: top;
+
 }
 
-
 .header-contacts {
-
-    display: inline-block;
-    vertical-align: top;
     text-align: right;
 }
 
-.clearfix::after {
-    clear: both;
+
+
+.header-menu {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    padding: 10px;
+    list-style: none;
+    background-color: #333;
+}
+.header-menu li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
 }
 
-header nav {
-    border: 1px solid #000;
+.header-menu li:last-child {
+    margin-right: 0;
+}
+
+.header-menu li a {
+    
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.header-menu li a::after {
+    content: "";
+    display: none;
+    border-bottom: 2px solid white;
+}
+
+.header-menu li a:hover::after {
+    display: block;
+    margin-bottom: -2px;
+}
+
+.header-menu li a:active {
+    opacity: 0.8;
+}
+
+.header-menu li a:active::after {
+    opacity: 0.8;
+}
+
+/*стили главного содержимого*/
+
+main {
 }
